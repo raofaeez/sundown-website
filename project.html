@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunDown Studio</title>
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="fixed-image"></div>
+   
+    <div id="main">
+        
+         <div id="page1">
+            <nav>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8AAAAhISHz8/PAwMDw8PD7+/v39/fS0tLLy8uvr6/Z2dn8/PypqamDg4Pf399ISEhycnLr6+uBgYETExOTk5N5eXmMjIxSUlKZmZkqKiq7u7ufn58bGxsNDQ3GxsZAQEBjY2M5OTlPT09nZ2dbW1svLy90dHQnJydEREQqAQijAAANqklEQVR4nO1d62KqvBJlRC6CgiCIilxERfv+L3gSrgkktN2lBb6T9WPvykWzyMxkMjMJkiQgICAgICAgICAgICCwFGzcqVvw28jNqVvwy1C8qVvw21jfpm7Bb8PaTd2C30ZmT92CX4YST92CTyEff3T7EtQwT35y9xLUcJP95O5FqOE+/Pd7ldV2vIb8GvT8sys0hXcmWYAaIjyNTy4wLN6Z4DpyW34H5uUTUVs7vDP7hTilj08MovnknFBW6uiN+RXYnzTUTTknFqKGCM6wOik8W7QQNURwYbATtTfn9FLUEOHoD57O2fN4eSlqiKAAd8jDSNmey4ZngeaIgDvkYZx09k2LUUMEOR4KKPlsfduziWOEP5uy/AbO32+SHGncUzA/j1yLvt2mATV0gh815ndwfXz3Dp+rhsmnzvwUUFff7USuGqorvoJOCYPvgmms3lK5boJ1GKVB4+PN9VCUN2P2od85V+srrgWaGOGJd0a9MNrMVcNsPVKDxsdlwzuTM1wenhqev22y/g7JB+9M2vcHNI4a2sMO4MTIeJHFZ7+/eGr48VlMZFJwI4uPvmr5Z+aVO579mQlOnMjiod8xbDV0B/3bGYAXWTz37CbHKb3NfrrBiSzuen6mzhxawnTc5vwCTNbYjlr+6h45s9RQixcQ1mBHFjc9j445KZ7llKILO2INc/a+c0B7y/2rNmwBmBteLPFzu8MIazTcznRK0YULDCMpvzsHzozgXDC/yAUbB0bj1UtHKJ99F9YcDrrOCMzIYkYP5BpjgjTjKUUXPiOyeKeHAb1reeY9pehC9vqe142WymtPkm3GTfPFuTe+S0faYe2r4X3WU4outH5QKqAcATXqqqox8ylFF/3IIi2WZneqrMwwAjyIba8TQyp8du16Z885TimuQ0UmRjecvaF69dSJBYSf1uRM4ZGbEXuSXuLdccCoydI2psd/zfuEgHubxN2R9w7fUQ47lsNOiQ9mSp88DqbmkERw4z+/jWPK97NyejxQLsSHjhpueEnw6tbbcboIccL/6SSlPqpv4tIn1SXbNzfMihEOn/59GLzf/6DdzEs7AnbUMOj7ByT0qUP8OnCckU5kkXC9TeqM6THmwhXsHxQFjgc359gJOrJIRC1oNcz4LM68p/fHUG9PpiDRkUWnFVpKDa/cRPAmf8wmvh+w62VuZA9YzQc1IsTSBc6UQnEuUw0RLBjAsjcmWR7bxoQpp/TOKfozwJ9XVMoEVksfhLfZ1piS0WGjPxPGsNP77GaLbsbITNtE5KWtMb210qfErCmFFnizsKEdqI9T394cW9e1KS1RL233PFiu7Xp1mHoI5MB/9zrEhcaouKniui76aLdquGZMKdxnOt+oaQg962eVOqeE1j6K4jheZc6jmSZoUZ/LFeY4U2xg95pXRBY3jxi8aFUg8jwvu5ZS2J9S6PltNkMgG3La9TF9y7yDt6IQgXdGJkj3OlMKzVnNaQjkwNnTneDGcbTqAzJd6s4ZjDiY1xDIwZkK0dgpi18hrU962m7f70sJRq2h9UD1iEMQISYH0G0QzcPJ/hLsJoBjMiW0kdSWYhId+VOoGULel/6L+x4iiChWlte95fMdAjk4ptjenAgbGkUeGg5jzyNJl/76zIdADq6xKe2gZhdDlD6PgX8OrMf+Au3gmKmSnt1m52R/CQkYl5IFeM+rTgwhmh0e82qIjH0rWk7WsAP7EhX80h2ji7YbB3lwWE6tpeR9GcBdCPy8rnsE9AhgjtOkLyIB1IGDJsT+iFcRt+h2/jh63qd7ehxgxQvTLACZl33eeB+WK6YKrL7SOxYML3qbMUz40iiwTblLhOeO5It5+YQdbFsAzK96mgvYNUJAQEBAQEBAQEBAQGDG+Msoo+68vb1fpb5sxyGTYL5TxlnWDpVZSXbV0ZeD8ArOYS+koRlOFkf7oJlH0t+skTNoG+dwNIcK6Wiv0ZKND7jqZphCmZLWAcgIWgplot4AKiy4c6qjcEawHh7AnsqHahZAkJi6cYO6smQbE8kodCvxTIrNb7YA5KxaGW0NkVOt8bmVIaMOw33FMAGyeS3Degtd+wHwaJtkxlBn4Nw73MoTFhA7fd7JEqSykN8Dco2wPBbDpvhALsWQw3ANQDapZdiIEroiqyUZfQkRp3rAfVsdbdL4Lur05oKkLEqJIkhbyRyN4a4T0OQxPO2AqG1jMJQ2UEuyAkBWCqk5lPUNF2gCb9cDtGJaVQDCegVtxf9oUnoFuiabx3AvvYg2sRiir6q6+QFk0Xch4oWG+dAsXcy0rEkJyNVRsNGPN+FV/s4o30QIMVVc0WNY9sb6A//dVKQzGUo5rPB/NnTL/HJ4Vicq4TVP0hnS+suqjkM/bBAx8rEYygBU8WiPYfmkMUM5agwqm+Gu7KsAuskKdKR4jBlUC6KtENOtBo+66h//cNAa1NFsKZIt8NvBboAhblRVQbIrDWuHITIf+OqPsisJJFXnXSumUq5huqVE2lBdVfzwrTGo4604PSOKENSiOsQQ28vy464eJWOS4XaFtVb1oLvuy6xMD3oEhVEplhCdoayitmrVK35YzSArqY24pta8QzsWDDLEnVAY/IYhveq5cBuUpqcboM4vbziVCvlKyoPFLzUiXX5ET6EU5VFXDScfUDdrmCE2qFh7OAwLwWMz9OsbXLzEpGh86Ua1iY3qh1ELCvdq5HXRIVQC1GNYjlU1Q3QAL59gM0TyaRT/dsvz9VpE5OKPdfkEroVHdGuNZ/XDRtmUsVd+ux6kVWMGGcorfB2bYSV3ewCJxrWxkA7cm+16XOxDKO03ND8cFM7F6Gvbw7K1LpBlssh2dBhiGg8OwysU+w749EOSsBMKlUVCjo+r1ab2icR515ZztnfdsC6MzlArW7sFMmtrQ48hNqhng8VQrcq80E10WtSExnHaXmAX1oW16KFKREl0y3CbQT6aX9qiGsUol+vIYIhl7s5ieIBcrf6g5kHIgrbl4D7cTzUT9FDPxLoboueRzjzHYviqm2hX0yPSN1zfPxgMMe/y2ivJMGicFNQFZJLfJ2caqINbUkcg61VI2UatGImh1ti9U70XhNXMDAxQniyG6NraGtb6JenIa22m8FoKq6a5Fl2PcSJImZR/R2lvOBZDbB1CdysnWfv9SMhWvhH6byRrj854WDF4Nwx3yWaTGEEOMbW0AjlKLx01UTFWQNcGhySpnBxXaPt0Hk0PXT9HErEKiDjM5oadHHihTj2/yz6kl2pLdmksjDzNL5dLvn/4m05URTaeMUQx5FYn4a+Rz+pM9m5nM2JnxFojTekW8Gqu7Q6ua/nS85Vd1pdQPsJQtGnBNX8CAgICAgICAgICAv9PkI3jy6/ifrsChmGUf+zQYdWgFjzpRhmiU40SycakZj/01Vv9enAOu2m33L3C7bo7godDLPrBQggeAIcA/2Wti+AuOX09VuEQdDg7nU7pCk2hH8Tkl7xa8wFu56t/gvg63SQwqLIIEbGmXicDTzKVyZasKtsg1/FWbYNT+01ukrg6iaFasK9YcJmqH+06GmUSwrUBYudSPsOWCkCz8Ls9HJKxxhCY+8L8AXasJTFDDA9VSo06bMdQbxLVHNapoDrOqk6z9itg7UczzNBhHN5AnUusD2/fnYD4HqZZwLcDxosevs8Qx3xLOa0P9/os7ATI/wpmPwn4TwztKhnYMEy7j06LYZrFX8gQ9vaR+QeGSAjT4v/qsAu95XoniMZo8LehntCA1tmkc9iWshlaVfurwwn0TJhF5G3+FrhIA/ZkHHqYocU6jPSuLNeoDu/6WufDZPvTygHmSDgu/8aQ6sN5MUQ+BzKFRL7kXxgGUJblVYfDvpQeJpPSAiEQxTHDlobN8FnpZ3XYpIv6MPZNCec08InfpxiqdPXak81Qq8W8Oqx50Fk260KvwOhv4RKZSoqh9CZHTDViM9zVOdSa6aGrdVfo7yD2tyCK1GiGRyDe5bEGJkM3rju6LghoSp4qyB7Le/oDNJloG9pyEJohqVJafmcxVJpixIYh7lVSum8Ted5a0/gXIVQ0QyxwVavdt8GypWtCxZpr8ejQUnxN5JVK2hOO+NG6L+54KBWe3XNt23qA2Pktw52iaIqr7zJ4t7tftQyl9QrKqig1yWG6DcDCD3hnF6BeW9FlKBl5kfCPDSx8pd2RoUZ2TIgcNsFQUo07xKfHHankpEZG0Tc6TWgr94ZmOwxDHRNR5SrAIZfQOgEYWaYOaHYSJrbI1AsICAgICAgICAh8H+HiNpr9JuThNwL9B3Bba66ehDN9KcAPkez81wmeTyd4Rsvd63IIO2Njr4rZ8iI2Xf8qtkYRYtHL6IT/39s9UMkPOFJoZoUFJV67Zj5eyOSsHxvUt0/Me6lbCWcGzi4GRcBaeRL5m8A1zpKbmo7kBtrTlYLuuueFwCjqgazDwcRvN/SpRLWxUy+6WoRKEcM14wU1S8DJxV0XSEdbdRxpT1pQd6WFd0nHC/jwuv3jQh2B+9oMciShByMPpXLNZFAGuPW9LSkv6YaInfELFPPB75kv3GP5ftwb3i85L+KoRlGD4Bfi+7B8yd2Dr0ibJbwwfgAHnDwLyffJJJp91SQFda+ra4khWUt5bwcbBw+bGGVoOFjQiztYOPsLHesEBAQEBAQEBAQEBAQEBAQEBAQEBAQEZob/AY7Zq3nkMdicAAAAAElFTkSuQmCC" alt="loading..">
+                <div id="nav-part2">
+                    <h4><a href="#">Work</a></h4>
+                    <h4><a href="#">Studio</a></h4>
+                    <h4><a href="#">Content</a></h4>
+                </div>
+               <h3>menu</h3>
+            </nav>
+            <div id="center">
+                <div id="left">
+                   <h3>Sundown is a multi-disciplinary studio focused on creating unique,end-to-end experiences and environment.</h3>
+                </div>
+                <div id="right">
+                    <h1>SPACE<br>
+                        THAT <br>
+                        INSPIRE</h1>
+                </div>
+            </div>
+            <div id="hero-shape">
+                <div id="hero-1"></div>
+                <div id="hero-2"></div>
+                <div id="hero-3"></div>
+            </div>
+            <video autoplay loop muted src="c72af10b (1).mp4"></video>
+         </div>
+         <div id="page2">
+            <div id="moving-text">
+                <div class="con">
+                    <h1>Experience</h1>
+                    <div id="gola"></div>
+                    <h1>environment</h1>
+                    <div id="gola"></div>
+                    <h1>content</h1>
+                    <div id="gola"></div>
+                </div>
+                <div class="con">
+                    <h1>Experience</h1>
+                    <div id="gola"></div>
+                    <h1>environment</h1>
+                    <div id="gola"></div>
+                    <h1>content</h1>
+                    <div id="gola"></div>
+                </div>
+                <div class="con">
+                    <h1>Experience</h1>
+                    <div id="gola"></div>
+                    <h1>environment</h1>
+                    <div id="gola"></div>
+                    <h1>content</h1>
+                    <div id="gola"></div>
+                </div>
+            </div>
+            <div id="page2-bottom">
+                <h1>We are a group of design-driven,goal-focused
+                    creators,producers,and designers who believe that the details make all the difference.
+                </h1>
+                <div id="bottom-part2">
+                    <img src="colorful-wallpaper-background-multicolored-generative-ai.jpg" alt="">
+                    <p>we love to create ,we love to solve,we love to collaborate, and we love to turn amazing ideas into reality
+                        .We're here to partner with you through every step of the process and know that relationships
+                        are the most important things we build.
+                    </p>
+                </div>
+            </div>
+            <div id="gooey">
+                
+            </div>
+         </div>
+         <div id="page3">
+            <div id="elem-container">
+                <div class="elem" id="elem1" data-image="https://images.unsplash.com/photo-1708359495712-2cef26b73452?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>Maker's Studio HOI</h2>
+                </div>
+                <div class="elem" data-image="https://images.unsplash.com/photo-1708200216325-845664d87f9a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>50th Anniversary</h2>
+                </div>
+                <div class="elem" data-image="https://images.unsplash.com/photo-1682687982049-b3d433368cd1?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>Nyfw Popup</h2>
+                </div>
+                <div class="elem" data-image="https://images.unsplash.com/photo-1704186776780-19672ed2019a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>Air Force 12021</h2>
+                </div>
+                <div class="elem" data-image="https://plus.unsplash.com/premium_photo-1705583864718-71cdbb830c79?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzN3x8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>SOHO NYC</h2>
+                </div>
+                <div class="elem" data-image="https://images.unsplash.com/photo-1708115106922-68796b8c3b8f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0OHx8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>SOHO 2023</h2>
+                </div>
+                <div class="elem" data-image="https://images.unsplash.com/photo-1708506751597-41137b9f546f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Mnx8fGVufDB8fHx8fA%3D%3D">
+                    <div class="overlay"></div>
+                    <h2>Play New Kidvision</h2>
+                </div>
+            </div>
+         </div>
+         <div id="page4">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+         </div>
+         <div id="page5"></div>
+         <div id="full-scr">
+            <div id="full-div1"></div>
+         </div>
+    </div>
+    <div id="footer">
+        <div id="footer-div"></div>
+        <h1>Sundown</h1>
+        <div id="footer-bottom"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="project.js"></script>
+</body>
+</html>
